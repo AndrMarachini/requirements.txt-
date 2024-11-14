@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center mt-5">
+    <h2>Bem-vindo ao Sistema de Gerenciamento de Usuários</h2>
+    <div class="mt-4">
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Cadastro de Novo Usuário</a>
+        <a href="{{ url_for('login') }}" class="btn btn-success">Login de Usuário</a>
+        <a href="{{ url_for('admin_login') }}" class="btn btn-warning">Login de Administrador</a>
+    </div>
+</div>
+{% endblock %}

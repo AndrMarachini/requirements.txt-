@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Administração - Todos os Usuários</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for email, user in users.items() %}
+            <tr>
+                <td>{{ email }}</td>
+                <td>{{ user['name'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
